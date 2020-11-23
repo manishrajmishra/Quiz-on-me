@@ -165,3 +165,32 @@ function checking(){
 	}
 }
 
+//writing function for cheching the score
+var x = false;
+var j = 0;
+var nameofloser;
+function highScoreCal(){
+  console.log("-------------------------------------");
+  for(var i=0;i<highScore.length;i++){
+    if(score >= highScore[i].score){
+      x = true;
+      j = i;
+      nameofloser = highScore[i].name;
+      highScore.push({name: userName, score: score});
+      break;
+    }
+  }
+  if(x){
+    console.log("You defeated " +nameofloser+ ", now you hold that position");
+    console.log("-------------------------------------");
+    console.log("New LeaderBoard : \n");
+    highScore.sort(function (a, b) {
+      return a.score - b.score;
+    });
+    for(var k=highScore.length-1;k>=0;k--){
+      console.log(highScore[k].name + " " + highScore[k].score);
+    }
+  }else{
+      console.log("You haven't defeated anyone in the LeaderBoard. Better Luck Next Time.")
+    }
+}
