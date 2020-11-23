@@ -156,14 +156,14 @@ function question(question, answer) {
 
 //checking if the quesposition has reached the end of the array of object
 function checking(){
-  if (AboutManishRajQuiz.length == quesposition) {
-    console.log("-------------------------------------");
-		console.log("Thanks for playing this quiz");
-    console.log("Your Score is   :   " + score);
-    //calling the function for high score
-    highScoreCal();
-	}
-}
+    if (AboutManishRajQuiz.length == quesposition) {
+      console.log("-------------------------------------");
+          console.log("Thanks for playing this quiz");
+      console.log("Your Score is   :   " + score);
+      //calling the function for high score
+      highScoreCal();
+      }
+  }
 
 //writing function for cheching the score
 var x = false;
